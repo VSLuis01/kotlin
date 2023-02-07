@@ -1,6 +1,7 @@
 package OrientacaoObjetos
 
 class Animal(var especie: String) {
+    // O Kotlin cria getters e setters automaticamente
     var fala: String = ""
 
     // É executado quando a classe é instanciada
