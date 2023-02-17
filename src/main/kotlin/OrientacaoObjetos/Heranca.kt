@@ -1,8 +1,15 @@
 package OrientacaoObjetos
 
-open class Eletronico(var marca: String) {
-    fun ligar(){}
-    fun desligar(){}
+open class Eletronico(private var marca: String) {
+
+
+    private fun ativarCorrente(s : String) {}
+
+    fun ligar() {
+        this.ativarCorrente("")
+    }
+
+    fun desligar() {}
 }
 
 class Computador(marca: String) : Eletronico(marca) {
@@ -17,5 +24,7 @@ fun main() {
 
     c.ligar()
     c.desligar()
+
+//    c.marca
 
 }
