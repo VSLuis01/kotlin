@@ -66,9 +66,6 @@ fun main() {
     data.filter { it.calorias > 500 }.forEach { println(it.nome) }
 
     // max & min
-//    println(data.maxOf { it.calorias})
-//    println(data.minOf { it.calorias})
-
     listOf(1, 2, 8, 4).maxOf { it }
     listOf(1, 2, 8, 4).maxOrNull()
 
@@ -82,5 +79,18 @@ fun main() {
 
     // average
     println(data.map { it.calorias }.average())
+
+    // distinct
+    val lst = listOf(1, 2, 3, 4, 5, 1, 2, 3, 4, 5)
+    println(lst.distinct())
+
+    println(data.distinctBy { it.calorias })
+
+    // sorted
+    println(lst.sorted())
+    println(lst.sortedDescending())
+
+    // reversed
+    println(lst.reversed())
 
 }
