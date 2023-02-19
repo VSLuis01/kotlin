@@ -50,4 +50,8 @@ fun main() {
     println(listOf(1, 2, 3, 4, 5).sum())
 
     println(data.sumOf { it.calorias })
+
+    // filter
+    println(data.filter { it.calorias > 500 })
+    println(data.count { it.calorias > 500 })
 }
