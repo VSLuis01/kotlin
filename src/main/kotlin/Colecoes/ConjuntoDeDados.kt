@@ -54,4 +54,12 @@ fun main() {
     // filter
     println(data.filter { it.calorias > 500 })
     println(data.count { it.calorias > 500 })
+
+
+    // take & takeLast
+    println(data.take(2))
+    println(data.takeLast(2))
+
+    // foreach
+    data.filter { it.calorias > 500 }.forEach { println(it.nome) }
 }
