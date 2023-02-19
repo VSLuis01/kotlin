@@ -33,6 +33,8 @@ fun gerarDados(): List<Receita> {
     )
 }
 
+data class ReceitaNIngrediente(val nome: String, val nIngrediente: Int)
+
 fun main() {
     val data = gerarDados()
 
@@ -73,5 +75,9 @@ fun main() {
     println(data.maxByOrNull { it.calorias }) // Retorna o objeto
     println(data.maxOf { it.calorias }) // Retorna o valor
 
+    // map
+
+    println(data.map { it.nome }) // map é usado para transformar uma coleção em outra
+    println(data.map { ReceitaNIngrediente(it.nome, it.ingredientes.count()) })
 
 }
