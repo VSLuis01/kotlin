@@ -80,4 +80,7 @@ fun main() {
     println(data.map { it.nome }) // map é usado para transformar uma coleção em outra
     println(data.map { ReceitaNIngrediente(it.nome, it.ingredientes.count()) })
 
+    // average
+    println(data.map { it.calorias }.average())
+
 }
