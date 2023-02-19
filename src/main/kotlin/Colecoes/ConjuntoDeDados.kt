@@ -36,7 +36,18 @@ fun gerarDados(): List<Receita> {
 fun main() {
     val data = gerarDados()
 
-    data.any() // Verifica se existe algum elemento na coleção
+    // Verifica se existe algum elemento na coleção
     println("Tem dados? ${if (data.any()) "Sim" else "Não"}")
     println("Tem ${data.count()} receitas")
+
+    println("Primeira receita: ${data.first().nome}")
+    println("Última receita: ${data.last().nome}")
+
+    println(listOf<Int>().firstOrNull())
+    println(listOf<Int>().lastOrNull())
+
+    // sum & sumOf
+    println(listOf(1, 2, 3, 4, 5).sum())
+
+    println(data.sumOf { it.calorias })
 }
