@@ -62,4 +62,16 @@ fun main() {
 
     // foreach
     data.filter { it.calorias > 500 }.forEach { println(it.nome) }
+
+    // max & min
+//    println(data.maxOf { it.calorias})
+//    println(data.minOf { it.calorias})
+
+    listOf(1, 2, 8, 4).maxOf { it }
+    listOf(1, 2, 8, 4).maxOrNull()
+
+    println(data.maxByOrNull { it.calorias }) // Retorna o objeto
+    println(data.maxOf { it.calorias }) // Retorna o valor
+
+
 }
